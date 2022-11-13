@@ -4,15 +4,15 @@
     name: myapp
     build:
       path: /var/lib/jenkins/workspace/Myapp
-      pull: 'no'
+      pull: no
     source: build
     state: present
     force_source: true
 
 - name: run container docker
   docker_container:
-    name: myapp_container
-    image: 142033/myapp:latest
+    name: myappcontainer
+    image: myapp:latest
     state: started
     recreate: true
     ports:
