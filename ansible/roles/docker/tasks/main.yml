@@ -1,0 +1,26 @@
+---
+- name: Create docker image
+  docker_image:
+    name: myapp
+    build:
+      path: /var/lib/slave/workspace/Myapp
+      pull: 'no'
+    source: build
+    state: present
+    force_source: true
+
+- name: run container docker
+  docker_container:
+    name: myapp_container
+    image: 142033/myapp:latest
+    state: started
+    recreate: true
+    ports:
+      - "4200:80"
+    
+    
+    
+    
+    
+
+
