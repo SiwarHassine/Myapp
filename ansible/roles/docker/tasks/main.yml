@@ -3,7 +3,7 @@
   docker_image:
     name: myapp
     build:
-      path: /var/lib/slave/workspace/Myapp
+      path: /var/lib/jenkins/workspace/Myapp
       pull: 'no'
     source: build
     state: present

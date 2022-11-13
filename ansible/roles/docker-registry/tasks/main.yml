@@ -4,7 +4,6 @@
   docker_login:
     username: 142033
     password: azertyazerty
-    email: siwar.hassine@esprit.tn
 - name: Push to docker hub
   docker_image:
     name: 142033/myapp
